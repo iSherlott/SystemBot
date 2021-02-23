@@ -19,22 +19,28 @@ No canal de `TAG` ele ira apagar tudo que há nele para refazer as mensagem, tod
 
 <details>
   <summary>Menu Exemplo</summary>
-  <img src="https://github.com/iSherlott/SystemBot/blob/main/menu.PNG?raw=true">
+  <img src="https://github.com/iSherlott/SystemBot/blob/main/screenshot/menu.PNG?raw=true">
 </details>
 
 <details>
   <summary>Welcome Exemplo</summary>
-  <img src="https://github.com/iSherlott/SystemBot/blob/main/welcome.PNG?raw=true">
+  <img src="https://github.com/iSherlott/SystemBot/blob/main/screenshot/welcome.PNG?raw=true">
 </details>
 
 <details>
   <summary> Exemplo</summary>
-  <img src="https://github.com/iSherlott/SystemBot/blob/main/color.PNG?raw=true">
+  <img src="https://github.com/iSherlott/SystemBot/blob/main/screenshot/color.PNG?raw=true">
 </details>
 
 ## Update:
 
-### ID Da Release: 1.0.1
+### ID Da Release:
+
+### 1.0.2
+
+- Atualização do Readme
+
+### 1.0.1
 
 - Adicionado as Tag Plataforma: Laptop da Xuxa, Geladeira, Desktop da Nasa
 - Adicionado as Tag Salas Tematicas: Developer, Jogadores de RPG
