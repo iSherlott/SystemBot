@@ -1,0 +1,13 @@
+{
+  "name": "one_room_sugar_life",
+  "version": "1.0.0",
+  "description": "master bot in server \"Happy Sugar Life\"",
+  "main": "start.js",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "jimp": "^0.16.1"
+  },
+  "devDependencies": {},
+  "author": "Sherlott Sumino",
+  "license": "ISC"
+}

@@ -1,0 +1,2 @@
+{"messagem":"Sat Jan 16 2021 13:54:19 GMT-0300 (GMT-03:00) - Cannot read property 'server_channel' of undefined","level":"error"}
+{"messagem":"Sat Jan 16 2021 13:55:11 GMT-0300 (GMT-03:00) - duplicate key value violates unique constraint \"Você já possue uma conta\"","level":"error"}
