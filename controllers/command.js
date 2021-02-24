@@ -7,6 +7,7 @@ module.exports = (client, aliases, callback) => {
 
   client.on("message", (message) => {
     if (message.author.bot) return;
+    if (message.channel.type === "dm") return;
 
     const content = message.content.toLowerCase();
 

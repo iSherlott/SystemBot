@@ -4,6 +4,11 @@ Bot controlador de servidor do discord, projetado exclusivamente para o servidor
 
 Favor, colocar os devidos creditos a o repositorio e outros que venho a referenciar.
 
+## dependencies
+
+`discord.js: ^12.5.1`
+`jimp: ^0.16.1`
+
 ## Observation
 
 Dentro da pasta "config", crie um arquivo "config.json" contendo as configurações para uso, assim como o exemplo abaixo:<br />
@@ -12,7 +17,7 @@ Dentro da pasta "config", crie um arquivo "config.json" contendo as configuraç�
 
 Lembrando que todos os emojis usado nesse codigo se encontra na pasta <a href="https://github.com/iSherlott/SystemBot/tree/master/assets">assets</a>
 
-Nos canais `RULES` e `COLOR`, só poderá conter 1 mensagem
+Nos canais `RULES` e `COLOR`, só poderá conter 1 mensagem<br />
 No canal de `TAG` ele ira apagar tudo que há nele para refazer as mensagem, toda vez que o bot for inicializado.
 
 ## Screenshot
@@ -34,21 +39,29 @@ No canal de `TAG` ele ira apagar tudo que há nele para refazer as mensagem, tod
 
 ## Update:
 
-### ID Da Release:
+## Releases :
 
-### 1.0.2
+### Release 1.0.3
+
+- Atualização do Readme
+- Bloquear comandos por DM
+- Atualização do package
+- Criação do comando hug
+- Criação do comando hit
+- Criação do comando kiss
+- Criação do comando kick
+- Criação da embed dos comandos hug, hit, kiss e kick
+
+### Release 1.0.2
 
 - Atualização do Readme
 
-### 1.0.1
+### Release 1.0.1
 
-- Adicionado as Tag Plataforma: Laptop da Xuxa, Geladeira, Desktop da Nasa
-- Adicionado as Tag Salas Tematicas: Developer, Jogadores de RPG
-- Adiconado em Tag Orientação Politica: A Favor do Feudalismo
-- Adicionado as Tag Orientação: Sexualmente Desativado, Furry,
-- Adicionado as Tag Status: Desativado por Inutilidade, Operador de Tuneladora, Dilacerador de Cavidade,
-- Adiconado em Tag Gênero: Aslan
-- Servidor agora possue: Boas Vindas Personalizado
+- Criação das Tag
+- Criação das Color
+- Criação das Rues
+- Boas Vindas Personalizado
 
 ## Credit
 
