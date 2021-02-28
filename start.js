@@ -5,7 +5,14 @@ const { token, rolesChannel } = require("./config/config");
 
 const command = require("./controllers/command");
 const clearAll = require("./commands/clear_all");
-const embedAction = require("./views/embed_action");
+const disconnect = require("./commands/disconnect");
+const aslan = require("./commands/aslan");
+const kiss = require("./commands/kiss");
+const kick = require("./commands/kick");
+const hug = require("./commands/hug");
+const hit = require("./commands/hit");
+const nickname = require("./commands/nickname");
+const help = require("./commands/help");
 
 const welcome = require("./controllers/welcome");
 
@@ -28,7 +35,18 @@ client.on("guildMemberAdd", (member) => {
   welcome(client, member);
 });
 
-var setCommands = ["clearAll", "kiss", "kick", "hug", "hit", "test"];
+var setCommands = [
+  "help",
+  "clearall",
+  "kiss",
+  "kick",
+  "hug",
+  "hit",
+  "test",
+  "aslan",
+  "disconnect",
+  "nickname",
+];
 
 command(client, setCommands, (message, alias) => {
   if (message.author.id == message.guild.owner) {
@@ -36,57 +54,33 @@ command(client, setCommands, (message, alias) => {
       case "clearall":
         clearAll(client, message.channel.id);
         break;
-      case "test":
-        const { mentions } = message;
-        console.log(mentions.users);
+      case "disconnect":
+        disconnect(client, message);
         break;
     }
   }
 
   switch (alias) {
+    case "help":
+      help(client);
+      break;
+    case "nickname":
+      nickname(client, message);
+      break;
+    case "aslan":
+      aslan(client, message);
+      break;
     case "kiss":
-      embedAction(
-        client,
-        message.channel.id,
-        message,
-        "kiss",
-        "beijou",
-        "#B0C4DE",
-        "💋"
-      );
+      kiss(client, message);
       break;
     case "kick":
-      embedAction(
-        client,
-        message.channel.id,
-        message,
-        "kick",
-        "chutou",
-        "#7FFFD4",
-        "🦶"
-      );
+      kick(client, message);
       break;
     case "hug":
-      embedAction(
-        client,
-        message.channel.id,
-        message,
-        "hug",
-        "abraçou",
-        "#A020F0",
-        "🤗"
-      );
+      hug(client, message);
       break;
     case "hit":
-      embedAction(
-        client,
-        message.channel.id,
-        message,
-        "hit",
-        "socou",
-        "#DB7093",
-        "🎯"
-      );
+      hit(client, message);
       break;
   }
 });

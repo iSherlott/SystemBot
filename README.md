@@ -41,6 +41,14 @@ No canal de `TAG` ele ira apagar tudo que há nele para refazer as mensagem, tod
 
 ## Releases :
 
+### Release 1.0.4
+
+- Atualização do Readme
+- Ramificando os comandos hug, hit, kiss e kick
+- Criação do comando aslan, onde desloga o aslan.
+- Criação do comando disconnect, para a menção junto ao comando desloga a pessoa.
+- Criação de embed informando quem deslogou e gif relacionada.
+
 ### Release 1.0.3
 
 - Atualização do Readme
