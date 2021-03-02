@@ -1,4 +1,4 @@
-const { prefix } = require("../config/config.json");
+const { prefix, commandChannel } = require("../config/config.json");
 
 module.exports = (client, aliases, callback) => {
   if (typeof aliases === "string") {
@@ -8,6 +8,8 @@ module.exports = (client, aliases, callback) => {
   client.on("message", (message) => {
     if (message.author.bot) return;
     if (message.channel.type === "dm") return;
+    for (let channel in commandChannel)
+      if (channel == message.channel.id) return;
 
     const content = message.content.toLowerCase();
 
@@ -15,7 +17,7 @@ module.exports = (client, aliases, callback) => {
       const command = `${prefix}${alias}`;
 
       if (content.startsWith(`${command} `) || content === command) {
-        callback(message, alias);
+        callback(client, message, alias);
       }
     });
   });

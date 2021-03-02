@@ -41,6 +41,12 @@ No canal de `TAG` ele ira apagar tudo que há nele para refazer as mensagem, tod
 
 ## Releases :
 
+### Release 2.0.0
+
+- Atualização do Readme.
+- Nova implementação de controle de rotas.
+- Separação das salas tematicas para as categorias: Gamer, Discotheque e Streaming.
+
 ### Release 1.1.0
 
 - Atualização do Readme.

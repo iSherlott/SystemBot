@@ -49,6 +49,9 @@ module.exports = (client, id) => {
       roleClaim(client, "Salas Tematicas", {
         developer: "Developer",
         rpg: "Jogadores de RPG",
+        game: "Gamer",
+        song: "Discotheque",
+        streaming: "Streaming",
       }),
       roleClaim(client, "Plataforma", {
         computador: "Computador",
