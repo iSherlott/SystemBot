@@ -12,6 +12,8 @@ const kick = require("./commands/kick");
 const hug = require("./commands/hug");
 const hit = require("./commands/hit");
 const nickname = require("./commands/nickname");
+const fortune = require("./commands/fortune");
+const daily = require("./commands/daily");
 const help = require("./commands/help");
 
 const welcome = require("./controllers/welcome");
@@ -46,6 +48,8 @@ var setCommands = [
   "aslan",
   "disconnect",
   "nickname",
+  "daily",
+  "fortune",
 ];
 
 command(client, setCommands, (message, alias) => {
@@ -81,6 +85,12 @@ command(client, setCommands, (message, alias) => {
       break;
     case "hit":
       hit(client, message);
+      break;
+    case "fortune":
+      fortune(message);
+      break;
+    case "daily":
+      daily(message);
       break;
   }
 });

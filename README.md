@@ -41,24 +41,31 @@ No canal de `TAG` ele ira apagar tudo que há nele para refazer as mensagem, tod
 
 ## Releases :
 
+### Release 1.1.0
+
+- Atualização do Readme.
+- Criação Do banco SQLite3 ao clicar no flag dos Rules.
+- Criação dos comando Daily e Fortune.
+- Criação dos comandos Disconnect e Nickname.
+
 ### Release 1.0.4
 
-- Atualização do Readme
-- Ramificando os comandos hug, hit, kiss e kick
+- Atualização do Readme.
+- Ramificando os comandos hug, hit, kiss e kick.
 - Criação do comando aslan, onde desloga o aslan.
 - Criação do comando disconnect, para a menção junto ao comando desloga a pessoa.
 - Criação de embed informando quem deslogou e gif relacionada.
 
 ### Release 1.0.3
 
-- Atualização do Readme
-- Bloquear comandos por DM
-- Atualização do package
-- Criação do comando hug
-- Criação do comando hit
-- Criação do comando kiss
-- Criação do comando kick
-- Criação da embed dos comandos hug, hit, kiss e kick
+- Atualização do Readme.
+- Bloquear comandos por DM.
+- Atualização do package.
+- Criação do comando hug.
+- Criação do comando hit.
+- Criação do comando kiss.
+- Criação do comando kick.
+- Criação da embed dos comandos hug, hit, kiss e kick.
 
 ### Release 1.0.2
 
