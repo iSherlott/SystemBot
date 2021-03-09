@@ -50,6 +50,7 @@ module.exports = (client, id) => {
         developer: "Developer",
         rpg: "Jogadores de RPG",
         game: "Gamer",
+        classroom: "Estudante",
         song: "Discotheque",
         streaming: "Streaming",
       }),

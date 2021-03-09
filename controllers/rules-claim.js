@@ -1,14 +1,16 @@
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("./db/database.db");
 
-const { rulesChannel, id_bot } = require("../config/config.json");
+const { channelRules, id_bot } = require("../config/config.json");
+
+const dateZero = require("../helpers/reset_timestamp");
 
 const addReactions = (message, reactions) => {
   message.react(reactions);
 };
 
 module.exports = async (client) => {
-  const channel = await client.channels.fetch(rulesChannel);
+  const channel = await client.channels.fetch(channelRules);
 
   const reactions = client.emojis.cache.find((emoji) => emoji.name === "flag");
 
@@ -24,7 +26,7 @@ module.exports = async (client) => {
     }
   });
 
-  const handleReaction = (reaction, user, add) => {
+  const handleReaction = (reaction, user) => {
     if (user.id === id_bot) {
       return;
     }
@@ -32,35 +34,30 @@ module.exports = async (client) => {
     const { guild } = reaction.message;
 
     const roleName = "Member";
-    if (!roleName) {
-      return;
-    }
 
     const role = guild.roles.cache.find((role) => role.name === roleName);
     const member = guild.members.cache.find((member) => member.id === user.id);
 
-    if (add) {
-      member.roles.add(role);
+    member.roles.add(role);
 
-      const { _roles } = guild.members.cache.find(
-        (member) => member.id === user.id
+    const { _roles } = guild.members.cache.find(
+      (member) => member.id === user.id
+    );
+
+    if (!_roles.includes(role.id)) {
+      let stm = db.prepare(
+        `INSERT INTO users (id, daily, fortune, coin, exp, level) VALUES (${
+          user.id
+        }, ${dateZero(Date.now())},  ${Date.now()}, 0, 0, 1);`
       );
-
-      if (!_roles.includes(role.id)) {
-        let stm = db.prepare(
-          `INSERT INTO users (id, daily, fortune, coin) VALUES (${
-            member.id
-          }, ${Date.now()}, ${Date.now()}, 0);`
-        );
-        stm.run();
-        stm.finalize();
-      }
+      stm.run();
+      stm.finalize();
     }
   };
 
   client.on("messageReactionAdd", (reaction, user) => {
     if (reaction.message.channel.id === channel.id) {
-      handleReaction(reaction, user, true);
+      handleReaction(reaction, user);
     }
   });
 };

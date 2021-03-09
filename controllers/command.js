@@ -8,8 +8,6 @@ module.exports = (client, aliases, callback) => {
   client.on("message", (message) => {
     if (message.author.bot) return;
     if (message.channel.type === "dm") return;
-    for (let channel in commandChannel)
-      if (channel == message.channel.id) return;
 
     const content = message.content.toLowerCase();
 

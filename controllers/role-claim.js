@@ -1,8 +1,8 @@
 const firstMessage = require("./first-message");
-const { rolesChannel, id_bot } = require("../config/config.json");
+const { channelRoles, id_bot } = require("../config/config.json");
 
 module.exports = (client, role, emojis) => {
-  const channelId = rolesChannel;
+  const channelId = channelRoles;
 
   const getEmoji = (emojiName) =>
     client.emojis.cache.find((emoji) => emoji.name === emojiName);
@@ -26,7 +26,6 @@ module.exports = (client, role, emojis) => {
     }
 
     const emoji = reaction._emoji.name;
-
     const { guild } = reaction.message;
 
     const roleName = emojis[emoji];

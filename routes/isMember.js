@@ -7,17 +7,30 @@ const nickname = require("../commands/nickname");
 const fortune = require("../commands/fortune");
 const daily = require("../commands/daily");
 const help = require("../commands/help");
+const roulette = require("../commands/roulette");
+const wallet = require("../commands/wallet");
+const serverInfo = require("../commands/serverInfo");
+const pay = require("../controllers/pay");
+const freeaslan = require("../helpers/freeAslan");
 
-module.exports = (client, alias, message) => {
+const channelCommand = require("../helpers/channelCommand");
+const { price } = require("../config/config.json");
+
+module.exports = async (client, alias, message) => {
   switch (alias) {
     case "help":
-      help(client);
+      help(message);
       break;
     case "nickname":
-      nickname(client, message);
+      if (channelCommand(message) && (await pay(message, price.nickname)))
+        nickname(client, message);
       break;
     case "aslan":
-      aslan(client, message);
+      if (
+        freeaslan(message) ||
+        (channelCommand(message) && (await pay(message, price.aslan)))
+      )
+        aslan(client, message, price.aslan);
       break;
     case "kiss":
       kiss(client, message);
@@ -32,10 +45,20 @@ module.exports = (client, alias, message) => {
       hit(client, message);
       break;
     case "fortune":
-      fortune(message);
+      if (channelCommand(message)) fortune(message);
       break;
     case "daily":
-      daily(message);
+      if (channelCommand(message)) daily(message);
+      break;
+    case "roulette":
+      if (channelCommand(message) && (await pay(message, price.roulette)))
+        roulette(client, message, price.roulette);
+      break;
+    case "wallet":
+      wallet(client, message);
+      break;
+    case "serverinfo":
+      serverInfo(message);
       break;
   }
 };

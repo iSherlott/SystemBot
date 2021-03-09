@@ -25,7 +25,9 @@ module.exports = async (message) => {
         stm.finalize();
 
         message.channel.send(
-          `Parabéns <@${message.author.id}>, Seu novo saldo é de ${
+          `Parabéns <@${
+            message.author.id
+          }>, Você acaba de ganhar ${coin}, Seu novo saldo é de ${
             rows.coin + coin
           } ${nameCoin}.`
         );

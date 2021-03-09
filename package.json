@@ -6,6 +6,8 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "jimp": "^0.16.1",
+    "node-schedule": "^2.0.0",
+    "redis": "^3.0.2",
     "sqlite3": "^5.0.2"
   },
   "git": "https://github.com/iSherlott/SystemBot",

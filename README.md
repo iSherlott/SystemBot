@@ -41,6 +41,30 @@ No canal de `TAG` ele ira apagar tudo que há nele para refazer as mensagem, tod
 
 ## Releases :
 
+### Release 3.0.0
+
+- Atualização do Readme.
+- Restringindo comandos Aslan, Daily, Fortune e Roulette para somene canal comando.
+- Criando o setor Price para exibir valores dos comandos.
+- Reduzindo valor Aslan para 2500.
+- Separado valores no arquivo config.
+- Aba rank criada
+- Sistema de Level e EXP.
+- Receber cargo ao atingir leveis.
+- Helper para restringir comandos criado.
+- Sala de sugestão e comando de votação em sugestão criado.
+- Cobrança de valores em color.
+- Mensagem temporaria no color ao adquirir valor.
+- Comando addCoin e subCoin para adicionar e subtrair valores a conta citada.
+- Comando serverInfo criado para exibir informações do servidor.
+- Comando register criado para registra usuarios não cadastrado.
+- Comando Help dinamico, helper só exibe os comandos que o usuario tem permissão.
+- Acrecentado novos gif no assets.
+- Sala tematica Classroom criada juntamente com seu cargo.
+- Helper criado para liberar router free para o aslan.
+- Reformulado routes.
+- Criado arquivo betaTest.js na raiz para teste de comandos.
+
 ### Release 2.0.0
 
 - Atualização do Readme.
